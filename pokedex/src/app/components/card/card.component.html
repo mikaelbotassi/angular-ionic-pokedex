@@ -1,11 +1,11 @@
-<ion-card>
-  <img alt="{{pokemon.photo}}" src="{{pokemon.photo}}" />
-  <ion-card-header>
-    <ion-card-title>{{pokemon.name}}</ion-card-title>
-    <ion-card-subtitle>{{pokemon.species}}</ion-card-subtitle>
-  </ion-card-header>
+<ion-card class="{{pokemon.type}}">
 
   <ion-card-content>
-    {{pokemon.height}}
+    <ion-card-title class="number">N° {{pokemon.number}}</ion-card-title>
+    <ion-card-title class="name">{{pokemon.name}}</ion-card-title>
+    <ion-button color="success">{{ pokemon.type }}</ion-button>
   </ion-card-content>
+
+  <img alt="{{pokemon.photo}}" src="{{pokemon.photo}}" />
+
 </ion-card>

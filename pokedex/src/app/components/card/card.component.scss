@@ -1,6 +1,57 @@
-.card-component{
+ion-card{
+  color: #fff;
+  border-radius: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  padding: 2rem;
+
+  img{
+    max-width: 100%;
+  }
+
+}
+
+ion-card-title.number{
+  font-weight: bold;
+  font-size: 2rem;
+  opacity: .5;
+}
+
+ion-card-title.name{
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.normal {
+  background-color: #a6a877;
+  background: linear-gradient(135deg, #1e1e1e 0%, #a6a877 100%);
+}
+
+.grass {
+  background-color: #77c850;
+  background: linear-gradient(135deg, #1e1e1e 0%, #77c850 100%);
+}
+
+.fire {
+  background-color: #ee7f30;
+  background: linear-gradient(135deg, #1e1e1e 0%, #ee7f30 100%);
+}
+
+.water {
+  background-color: #678fee;
+  background: linear-gradient(135deg, #1e1e1e 0%, #678fee 100%);
+}
+
+.electric {
+  background-color: #f7cf2e;
+  background: linear-gradient(135deg, #1e1e1e 0%, #f7cf2e 100%);
+}
+
+.ice {
+  background-color: #98d5d7;
+  background: linear-gradient(135deg, #1e1e1e 0%, #98d5d7 100%);
+}
+
+.ground {
+  background-color: #dfbf69;
+  background: linear-gradient(135deg, #1e1e1e 0%, #dfbf69 100%);
 }
