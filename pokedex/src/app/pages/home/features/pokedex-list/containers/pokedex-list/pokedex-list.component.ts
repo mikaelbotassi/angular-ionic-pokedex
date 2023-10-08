@@ -1,18 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from 'src/app/services/http.service';
-import { CardComponent } from '../../components/card/card.component';
-import { IonicModule } from '@ionic/angular';
 import { Pokemon } from 'src/app/models/pokemon';
-import { CommonModule } from '@angular/common';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.page.html',
-    styleUrls: ['./home.page.scss'],
-    standalone: true,
-    imports: [IonicModule, CardComponent, CommonModule],
+  selector: 'app-pokedex-list',
+  templateUrl: './pokedex-list.component.html',
+  styleUrls: ['./pokedex-list.component.scss'],
 })
-export class HomePage implements OnInit {
+export class PokedexListComponent  implements OnInit {
 
   public pokemons : Pokemon[] = [];
 

@@ -1,0 +1,9 @@
+<ion-content>
+  <ion-list class="ion-no-padding">
+    <ion-row>
+      <ion-col *ngFor="let pokemon of pokemons" size-md="12" size-lg="6">
+        <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

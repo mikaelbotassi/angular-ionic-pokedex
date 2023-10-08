@@ -4,18 +4,31 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { RootHomeComponent } from './containers/root-home/root-home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { PokedexListComponent } from './features/pokedex-list/containers/pokedex-list/pokedex-list.component';
+import { FeatureModule } from './features/feature.module';
 
-import { HomePage } from './home.page';
-import { CardComponent } from 'src/app/components/card/card.component';
+const routes: Routes = [
+  {
+    path: '',
+    component: RootHomeComponent,
+    children: [
+      {path: '', component: PokedexListComponent}
+    ]
+  }
+];
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
-        HomePageRoutingModule,
-        HomePage, CardComponent
+        RouterModule.forRoot(routes),
+        FeatureModule
+    ],
+    declarations:[
+      RootHomeComponent
     ]
 })
 export class HomePageModule {}
