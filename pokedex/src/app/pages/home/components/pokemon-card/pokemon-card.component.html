@@ -2,8 +2,8 @@
 
   <ion-card-content>
     <ion-card-title class="number">N° {{pokemon.number}}</ion-card-title>
-    <ion-card-title class="name">{{pokemon.name}}</ion-card-title>
-    <ion-button color="success">{{ pokemon.type }}</ion-button>
+    <ion-card-title class="name ion-padding-vertical">{{pokemon.name}}</ion-card-title>
+    <ion-button [disabled]="true" color="light" shape="round">{{ pokemon.type }}</ion-button>
   </ion-card-content>
 
   <img alt="{{pokemon.photo}}" src="{{pokemon.photo}}" />

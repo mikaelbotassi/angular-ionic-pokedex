@@ -8,6 +8,7 @@ import { RootHomeComponent } from './containers/root-home/root-home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PokedexListComponent } from './features/pokedex-list/containers/pokedex-list/pokedex-list.component';
 import { FeatureModule } from './features/feature.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [
   {
@@ -25,7 +26,8 @@ const routes: Routes = [
         FormsModule,
         IonicModule,
         RouterModule.forRoot(routes),
-        FeatureModule
+        FeatureModule,
+        SharedModule
     ],
     declarations:[
       RootHomeComponent
