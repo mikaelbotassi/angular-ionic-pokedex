@@ -27,10 +27,11 @@ const routes: Routes = [
         IonicModule,
         RouterModule.forRoot(routes),
         FeatureModule,
-        SharedModule
+        SharedModule,
+
     ],
     declarations:[
-      RootHomeComponent
-    ]
+      RootHomeComponent,
+    ],
 })
 export class HomePageModule {}

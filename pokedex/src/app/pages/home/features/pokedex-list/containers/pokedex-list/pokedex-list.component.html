@@ -1,9 +1,13 @@
 <ion-content class="ion-padding">
   <ion-grid>
+    <ion-searchbar [(ngModel)]="search" ></ion-searchbar>
     <ion-row>
-      <ion-col *ngFor="let pokemon of pokemons" size-md="12" size-lg="6">
+      <ion-col *ngFor="let pokemon of pokemons | pokemonName:search" size-md="12" size-lg="6">
         <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
       </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-button (click)="nextPage()" color="success">Próximo</ion-button>
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -1,0 +1,27 @@
+<ion-card class="{{pokemon.type}}">
+  <ion-card-header>
+    <ion-card-title>{{ pokemon.name }}</ion-card-title>
+  </ion-card-header>
+  <div class="types">
+    <ion-chip class="fs-5" *ngFor="let type of pokemon.types">{{type}}</ion-chip>
+  </div>
+  <div class="pokemon-photo">
+    <h2 class="number fw-bold display-1">#{{ pokemon.number }}</h2>
+    <ion-img [src]="pokemon.photo" [alt]="pokemon.name"></ion-img>
+  </div>
+  <ion-card-content>
+    <h2 class="fw-bold">About</h2>
+    <div class="more-details">
+      <article>
+        <h5 >Species</h5>
+        <h5 >Height</h5>
+        <h5 >Weight</h5>
+      </article>
+      <article>
+        <p>Seed</p>
+        <p>24</p>
+        <p>15,2</p>
+      </article>
+    </div>
+  </ion-card-content>
+</ion-card>

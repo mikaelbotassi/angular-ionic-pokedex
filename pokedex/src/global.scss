@@ -24,3 +24,71 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.toastr-success {
+  --background: var(--ion-color-success); // Define a cor de fundo como vermelho
+  color: white; // Define a cor do texto como branco
+}
+
+.toastr-danger {
+  --background: var(--ion-color-danger); // Define a cor de fundo como vermelho
+  color: white; // Define a cor do texto como branco
+}
+
+.normal {
+  background-color: #a6a877;
+  background: linear-gradient(135deg, #1e1e1e 0%, #a6a877 100%);
+}
+
+.grass {
+  background-color: #77c850;
+  background: linear-gradient(135deg, #1e1e1e 0%, #77c850 100%);
+}
+
+.fire {
+  background-color: #ee7f30;
+  background: linear-gradient(135deg, #1e1e1e 0%, #ee7f30 100%);
+}
+
+.water {
+  background-color: #678fee;
+  background: linear-gradient(135deg, #1e1e1e 0%, #678fee 100%);
+}
+
+.electric {
+  background-color: #f7cf2e;
+  background: linear-gradient(135deg, #1e1e1e 0%, #f7cf2e 100%);
+}
+
+.ice {
+  background-color: #98d5d7;
+  background: linear-gradient(135deg, #1e1e1e 0%, #98d5d7 100%);
+}
+
+.ground {
+  background-color: #dfbf69;
+  background: linear-gradient(135deg, #1e1e1e 0%, #dfbf69 100%);
+}
+
+.fw-light{ font-weight: 200 !important }
+.fw-normal{ font-weight: 500 !important}
+.fw-semibold{ font-weight: 600 !important}
+.fw-bold{ font-weight: 700 !important}
+.fw-extrabold{ font-weight: 800 !important}
+
+@for $i from 1 through 5{
+
+    h#{$i}, .h#{$i}{
+        font-size: #{2.5 - ($i * 0.25)}rem !important;
+        line-height: 1.2 !important;
+        font-weight: normal !important;
+    }
+
+    .fs-#{$i}{
+        font-size: #{2.5 - ($i * 0.25)}rem !important;
+    }
+
+    .display-#{$i}{
+        font-size: #{5 - ($i * 0.5)}rem !important;
+    }
+}

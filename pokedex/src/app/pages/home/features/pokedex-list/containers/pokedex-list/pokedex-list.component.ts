@@ -1,45 +1,61 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 import { Pokemon } from 'src/app/models/pokemon';
 import { HttpService } from 'src/app/services/http.service';
+import { NotificationService } from 'src/app/services/notification.service';
 
 @Component({
   selector: 'app-pokedex-list',
   templateUrl: './pokedex-list.component.html',
   styleUrls: ['./pokedex-list.component.scss'],
 })
+
 export class PokedexListComponent  implements OnInit {
 
-  public pokemons : Pokemon[] = [];
+  pokemons: Pokemon[] = [];
+  offset:number = 0;
+  public search:string = "";
 
-  constructor(private httpService : HttpService) { }
+  constructor(
+    private httpService : HttpService,
+    private toastr: NotificationService
+  ) { }
 
   ngOnInit() {
-    this.getPokemons();
+    this.loadPokemons();
   }
 
-  async getPokemons() {
-    try {
-      const data: any = await this.httpService.getPokemons();
-      for (const element of data.results) {
-        try {
-          const pokemonDetail = await this.getPokemonDetail(element.url);
-          this.pokemons.push(pokemonDetail);
-        } catch (e) {
-          console.error("Error: ", e);
-        }
+  loadPokemons(){
+    this.httpService.getPokemons().subscribe({
+      next:(resp) => {
+        resp.results.forEach((data:any) => this.getPokemonDetail(data.url))
+      },
+      error:(err) => {
+        this.toastr.showError("It looks like there was some error while fetching the data, please try again later.");
+        throw new Error(err);
       }
-    } catch (error) {
-      console.log(error);
-    }
+    })
+
+    this.offset = this.httpService.offset;
+
   }
 
-  async getPokemonDetail(url: string): Promise<any> {
-    try {
-      const resp: Pokemon = await this.httpService.getPokemonDetail(url);
-      return resp;
-    } catch (err:any) {
-      throw new Error(err);
-    }
+  getPokemonDetail(url: string): any {
+    this.httpService.getPokemon(url).subscribe({
+      next:(resp) => {
+        this.pokemons.push(Pokemon.fromPokeApi(resp))
+      },
+      error:(err) => {
+        this.toastr.showError("It looks like there was some error while fetching the data, please try again later.");
+        throw new Error(err);
+      }
+    })
   }
+
+  nextPage() {
+    this.httpService.offset += this.httpService.limit;
+    this.loadPokemons();
+  }
+
 
 }
