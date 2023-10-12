@@ -114,3 +114,26 @@ export class Pokemon {
   }
 
 }
+
+export const mockPokemonData: any = {
+  id: 1,
+  name: 'Pikachu',
+  types: [
+    { type: { name: 'Electric' } }
+  ],
+  sprites: {
+    other: {
+      dream_world: {
+        front_default: 'https://example.com/pikachu.png'
+      }
+    }
+  },
+  abilities: [
+    { ability: { name: 'Static' } }
+  ],
+  height: 40,
+  weight: 6,
+  species: { name: 'Mouse' }
+};
+
+export const mockPokemon: Pokemon = Pokemon.fromPokeApi(mockPokemonData);
