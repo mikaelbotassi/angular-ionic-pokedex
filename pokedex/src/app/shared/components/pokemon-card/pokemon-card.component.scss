@@ -48,11 +48,6 @@ ion-card-title.name{
     padding: 2rem;
     align-items: center;
     justify-content:space-between;
-
-    ion-card-content{
-      ion-button{width: auto;}
-    }
-
   }
 
 }
@@ -64,26 +59,4 @@ ion-router-link{
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-.button-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 48px;
-  height: 48px;
-  margin-top: 1rem;
-  margin-left: 2rem;
-  z-index: 3;
-}
-
-.heart-button {
-  --background: transparent;
-  --border-width: 1px;
-  --border-color: white;
-  --color: white;
-  --border-radius: 50%;
-  --padding-start: 10px;
-  --padding-end: 10px;
-
 }

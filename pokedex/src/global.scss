@@ -92,3 +92,28 @@
         font-size: #{5 - ($i * 0.5)}rem !important;
     }
 }
+
+.favorite-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 3;
+}
+
+ion-button[shape=circle].btn-lg {
+  --border-radius: 50%;
+  width: 56px;
+  height: 56px;
+}
+
+ion-button[shape=circle].btn {
+  --border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+ion-button[shape=circle].btn-sm {
+  --border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}

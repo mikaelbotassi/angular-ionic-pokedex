@@ -1,21 +1,17 @@
-<ion-menu contentId="main-content">
+<ion-menu contentId="main-content"  menuId="sidebar" side="start">
   <ion-header>
     <ion-toolbar>
-      <ion-title><img src="assets/logo.png" alt=""></ion-title>
+      <ion-title [routerLink]="''"><img src="assets/logo.png" alt=""></ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    <ion-item>
-      <ion-router-link [routerLink]="''">
-        <ion-icon name="home-outline"></ion-icon>
-        Home
-      </ion-router-link>
-    </ion-item>
-    <ion-item>
-      <ion-router-link [routerLink]="'favorites'">
-        <ion-icon name="star"></ion-icon>
-        Favorites
-      </ion-router-link>
-    </ion-item>
+
+    <ion-menu-toggle *ngFor="let item of menuItems">
+      <ion-item [routerLink]="item.path" routerDirection="root" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">
+        <ion-icon [name]="item.icon"  slot="start"></ion-icon>
+        {{item.title}}
+      </ion-item>
+    </ion-menu-toggle>
+
   </ion-content>
 </ion-menu>

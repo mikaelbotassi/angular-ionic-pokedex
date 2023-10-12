@@ -6,9 +6,9 @@ import { IonicModule } from '@ionic/angular';
 
 import { RootHomeComponent } from './containers/root-home/root-home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { PokedexListComponent } from './features/pokedex-list/containers/pokedex-list/pokedex-list.component';
-import { FeatureModule } from './features/feature.module';
+import { PokedexListComponent } from './containers/pokedex-list/containers/pokedex-list/pokedex-list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { PipeModule } from 'src/app/pipes/pipe.module';
 
 const routes: Routes = [
   {
@@ -26,12 +26,12 @@ const routes: Routes = [
         FormsModule,
         IonicModule,
         RouterModule.forRoot(routes),
-        FeatureModule,
         SharedModule,
-
+        PipeModule
     ],
     declarations:[
       RootHomeComponent,
+      PokedexListComponent
     ],
 })
 export class HomePageModule {}
