@@ -10,7 +10,7 @@
     <ion-icon [name]="isFavorite ? 'star' : 'star-outline'" slot="icon-only" size="large"></ion-icon>
   </ion-button>
 
-  <img alt="{{pokemon.photo}}" src="{{pokemon.photo}}" />
+  <img alt="{{pokemon.name}}" src="{{pokemon.photo}}" />
 
   <ion-router-link [routerLink]="'/pokemon/' + pokemon.number"></ion-router-link>
 
