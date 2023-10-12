@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { RootFavoritesComponent } from './root-favorites.component';
+import { RouterModule } from '@angular/router';
 
 describe('RootFavoritesComponent', () => {
   let component: RootFavoritesComponent;
@@ -10,7 +11,7 @@ describe('RootFavoritesComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ RootFavoritesComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), RouterModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(RootFavoritesComponent);

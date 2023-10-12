@@ -22,15 +22,8 @@ export class SidebarComponent  implements OnInit {
     },
   ]
 
-  constructor(
-    private route:Router,
-    private menuController:MenuController
-  ) { }
+  constructor() { }
 
   ngOnInit() {}
-
-  isOptionSelected(optionRoute: string): boolean {
-    return this.route.isActive(optionRoute, true);
-  }
 
 }

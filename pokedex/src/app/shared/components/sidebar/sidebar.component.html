@@ -7,7 +7,7 @@
   <ion-content class="ion-padding">
 
     <ion-menu-toggle *ngFor="let item of menuItems">
-      <ion-item [routerLink]="item.path" routerDirection="root" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">
+      <ion-item [routerLink]="item.path" routerDirection="root" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">
         <ion-icon [name]="item.icon"  slot="start"></ion-icon>
         {{item.title}}
       </ion-item>
