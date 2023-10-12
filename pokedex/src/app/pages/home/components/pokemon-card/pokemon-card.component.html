@@ -6,6 +6,12 @@
     <ion-button [disabled]="true" color="light" shape="round">{{ pokemon.type }}</ion-button>
   </ion-card-content>
 
+  <div class="button-container">
+    <ion-button fill="clear" class="heart-button large">
+      <ion-icon name="star"></ion-icon>
+    </ion-button>
+  </div>
+
   <img alt="{{pokemon.photo}}" src="{{pokemon.photo}}" />
 
   <ion-router-link [routerLink]="'/pokemon/' + pokemon.number"></ion-router-link>
