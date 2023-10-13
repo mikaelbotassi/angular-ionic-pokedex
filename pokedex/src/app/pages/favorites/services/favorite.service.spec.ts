@@ -5,16 +5,18 @@ describe('FavoriteService', () => {
   let service: FavoriteService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers:[FavoriteService]
-    });
-    service = TestBed.inject(FavoriteService);
+    TestBed.configureTestingModule({});
+    service = new FavoriteService;
     localStorage.clear();
   });
 
   afterEach(() => {
     localStorage.clear();
   });
+
+  afterAll(() => {
+    localStorage.clear();
+  })
 
   it('should be created', () => {
     expect(service).toBeTruthy();
