@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { RootFavoritesComponent } from './root-favorites.component';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('RootFavoritesComponent', () => {
   let component: RootFavoritesComponent;
@@ -13,7 +14,7 @@ describe('RootFavoritesComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [RootFavoritesComponent],
-      imports: [IonicModule.forRoot(), RouterTestingModule],
+      imports: [IonicModule.forRoot(), RouterTestingModule, SharedModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(RootFavoritesComponent);
