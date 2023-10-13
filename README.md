@@ -60,6 +60,27 @@ Linux users can typically install Node.js using their package manager. For examp
 ```bash
 sudo apt-get install nodejs
 ```
+## Installing Angular CLI (Command Line Interface)
+
+
+Angular CLI is a powerful tool that simplifies various development tasks. To install Angular CLI for your project, follow these steps:
+
+Open your terminal or command prompt.
+
+Run the following command to install Angular CLI globally on your system:
+
+```bash
+npm install -g @angular/cli
+```
+
+Wait for the installation to complete. Once it's done, you can verify the installation by running:
+```bash
+ng version
+```
+
+This should display the installed Angular CLI version.
+
+Now you're ready to use Angular CLI to simplify your development tasks, such as generating components, services, modules, and more.
 
 ## Installing Ionic CLI (Command Line Interface)
 
