@@ -133,7 +133,7 @@ The `services/` folder contains services for business logic. This helps maintain
 
 ## Running unit tests
 A good way to analyze what components and services should do is to check the unit tests. Use the command:
-`ionic test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Code scaffolding
 
