@@ -56,7 +56,6 @@ describe('SidebarComponent', () => {
     fixture.detectChanges();
 
     const updatedActiveLink = debugElement.query(By.css('.active-link'));
-    console.log("🚀 ~ file: sidebar.component.spec.ts:58 ~ for ~ it ~ updatedActiveLink:", updatedActiveLink)
     expect(updatedActiveLink).not.toBeNull(); // Deve haver um link ativo após a navegação
   }));
 });

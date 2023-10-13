@@ -7,6 +7,7 @@ import { NotificationService } from 'src/app/services/notification.service';
 import { Pokemon, mockPokemon } from 'src/app/models/pokemon';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('PokemonCardComponent', () => {
   let component: PokemonCardComponent;
@@ -16,7 +17,7 @@ describe('PokemonCardComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PokemonCardComponent ],
-      imports: [IonicModule.forRoot()],
+      imports: [IonicModule.forRoot(), RouterTestingModule],
       providers:[NotificationService]
     }).compileComponents();
 
@@ -68,6 +69,6 @@ describe('PokemonCardComponent', () => {
 
     const routerLink = fixture.debugElement.query(By.css('ion-router-link'));
     expect(routerLink).toBeTruthy();
-    expect(routerLink.nativeElement.routerLink).toEqual(`/pokemon/${component.pokemon.number}`);
+    expect(routerLink.nativeElement.href).toEqual(`/pokemon/${component.pokemon.number}`);
   });
 });

@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { RootPokemonDetailComponent } from './root-pokemon-detail.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('RootPokemonDetailComponent', () => {
   let component: RootPokemonDetailComponent;
@@ -13,7 +14,7 @@ describe('RootPokemonDetailComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [RootPokemonDetailComponent],
-      imports: [IonicModule.forRoot(), RouterTestingModule],
+      imports: [IonicModule.forRoot(), RouterTestingModule, SharedModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(RootPokemonDetailComponent);

@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { RootHomeComponent } from './root-home.component';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('RootHomeComponent', () => {
   let component: RootHomeComponent;
@@ -13,7 +14,7 @@ describe('RootHomeComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [RootHomeComponent],
-      imports: [IonicModule.forRoot(), RouterTestingModule],
+      imports: [IonicModule.forRoot(), RouterTestingModule, SharedModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(RootHomeComponent);
